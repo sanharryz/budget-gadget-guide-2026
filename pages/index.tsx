@@ -2,7 +2,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import Card from '../components/Card';
-import BackToTop from '../components/BackToTop';
 
 export default function Home() {
   const structuredData = {
@@ -15,7 +14,7 @@ export default function Home() {
       "name": "Smartwatch Reviews"
     },
     "datePublished": "2026-01-01",
-    "image": "https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=2070&auto=format&fit=crop"
+    "image": "/images/smartwatch-hero.jpg"
   };
 
   return (
@@ -26,34 +25,13 @@ export default function Home() {
         <meta name="keywords" content="smartwatch, cheap smartwatch, budget smartwatch, fitness tracker, 2026 smartwatches" />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </Head>
-      <header style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1546868871-7041f2a55e12?q=80&w=2070&auto=format&fit=crop')`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        textAlign: 'center',
-        padding: '8rem 0',
-        marginBottom: '4rem',
-        color: 'white',
-      }}>
-        <h1 style={{ 
-          fontSize: '4.5rem', 
-          fontWeight: 'bold', 
-          textShadow: '2px 2px 8px rgba(0,0,0,0.5)',
-          margin: 0,
-        }}>
-          Best Cheap Smartwatches in 2026
-        </h1>
-        <p style={{ 
-          fontSize: '1.5rem', 
-          textShadow: '1px 1px 4px rgba(0,0,0,0.5)',
-          marginTop: '1rem',
-        }}>
-          Top Picks Under $100 for Style, Fitness, and Smart Features
-        </p>
+      <header>
+        <h1>Best Cheap Smartwatches in 2026</h1>
+        <p className="meta">Top Picks Under $100 for Style, Fitness, and Smart Features</p>
       </header>
       <main>
         <article>
-          <p className="meta">Looking for the best cheap smartwatches in 2026? We've rounded up the top budget picks under $100 with great battery life, fitness tracking, and smart features.</p>
+          <p>Looking for the best cheap smartwatches in 2026? We've rounded up the top budget picks under $100 with great battery life, fitness tracking, and smart features.</p>
 
           <p>Are you looking for a smartwatch that won't break the bank? You're in the right place. In 2026, budget smartwatches have come a long way — you no longer need to spend hundreds of dollars to get a device that tracks your health, delivers notifications, and looks great on your wrist.</p>
 
@@ -74,7 +52,7 @@ export default function Home() {
             title="1. Amazfit Active 2 — Best Overall Under $100"
             price="~$99"
             compatibility="Android & iOS"
-            imageSrc="/amazfit-active-2.jpg"
+            imageSrc="images/amazfit-active-2.jpg"
             alt="Amazfit Active 2 smartwatch on a dark background"
           >
             <p>The Amazfit Active 2 is the top pick for budget smartwatches in 2026. It packs an impressive feature set for the price — including onboard GPS, over 160 sports modes, sleep tracking, NFC payments, and offline music storage.</p>
@@ -104,7 +82,7 @@ export default function Home() {
             title="2. Amazfit Bip 6 — Best Features for the Price"
             price="~$80"
             compatibility="Android & iOS"
-            imageSrc="/amazfit-bip-6.jpg"
+            imageSrc="images/amazfit-bip-6.jpg"
             alt="Amazfit Bip 6 smartwatch with a colorful watch face"
           >
             <p>If you want to spend a little less and still get a great display, the Amazfit Bip 6 is hard to beat. It features a vivid 1.69" AMOLED screen and impressive 14-day battery life, making it one of the longest-lasting budget smartwatches available.</p>
@@ -133,7 +111,7 @@ export default function Home() {
             title="3. Apple Watch SE 3 — Best Cheap Smartwatch for iPhone Users"
             price="Starting at $249 (frequently on sale)"
             compatibility="iOS only"
-            imageSrc="/apple-watch-se-3.jpg"
+            imageSrc="images/apple-watch-se-3.jpg"
             alt="Apple Watch SE 3 in silver aluminum case"
           >
             <p>If you're an iPhone user, the Apple Watch SE 3 is the best affordable Apple Watch you can buy. It comes with Apple's latest S10 processor, an always-on display, 5G connectivity, and most of Apple's top health and fitness features — without the premium price of the Apple Watch Series 10.</p>
@@ -162,7 +140,7 @@ export default function Home() {
             title="4. CMF by Nothing Watch 3 Pro — Best for Style and Calls"
             price="~$70"
             compatibility="Android & iOS"
-            imageSrc="/cmf-watch-3-pro.jpg"
+            imageSrc="images/cmf-watch-3-pro.jpg"
             alt="CMF by Nothing Watch 3 Pro with an orange band"
           >
             <p>The CMF by Nothing Watch 3 Pro stands out for its eye-catching design and built-in speaker/microphone for taking calls directly from your wrist. At just $70, it's one of the most stylish options in the budget category.</p>
@@ -190,7 +168,7 @@ export default function Home() {
             title="5. Fitbit Inspire 4 — Best for Health Monitoring"
             price="~$99"
             compatibility="Android & iOS"
-            imageSrc="/fitbit-inspire-4.jpg"
+            imageSrc="images/fitbit-inspire-4.jpg"
             alt="Fitbit Inspire 4 fitness tracker in black"
           >
             <p>If health tracking is your top priority, the Fitbit Inspire 4 is one of the most accurate budget fitness trackers available. It offers consistent heart rate monitoring, stress tracking, sleep analysis, and 6 months of Fitbit Premium included.</p>
@@ -211,7 +189,7 @@ export default function Home() {
               <li>Less smartwatch functionality</li>
               <li>Requires Fitbit Premium subscription after trial</li>
             </ul>
-            <p><strong>Best for:</strong> Health-focused users who want accurate data above all else.</p>
+            <p><strong>Best for:</strong> Health-focused users who want a accurate data above all else.</p>
           </Card>
 
           <h2>Quick Comparison Table</h2>
@@ -279,7 +257,6 @@ export default function Home() {
           <p>Yes — most budget smartwatches like the Amazfit Active 2 and Bip 6 are compatible with both Android and iOS. However, for the best iPhone experience, the Apple Watch SE 3 is the recommended option.</p>
         </article>
       </main>
-      <BackToTop />
       <footer className="footer">
         <div className="social-links">
           <a href="#" aria-label="Twitter"><svg /* SVG for Twitter */ ></svg></a>
